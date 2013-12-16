@@ -1,0 +1,122 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*-------layout-------*/
+
+.navbar-brand img {
+	height: auto;
+  max-width:150px;
+  margin-top: -7px;
+}
+
+.navbar-right {
+  margin-top: 7px;
+}
+
+.navbar-toggle {
+  margin-top: 15px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 8px;
+}
+
+.navbar-inverse {
+	background-color: #080808;
+  /*background-image: url("http://coderdojosv.com/static/brushedsteel.jpg");
+  background-size: 100% 100%;*/
+}
+
+#body {
+  margin-top: 66px;
+}
+
+.center {text-align: center;}
+
+/*-------banner-------*/
+
+#homebanner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: url('http://www.placekitten.com/1402/1000') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.placekitten.com/1402/1000', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.placekitten.com/1402/1000', sizingMethod='scale')";
+}
+
+#homebanner {text-align: center; margin-bottom: 20px;}
+
+.btn {
+  border-radius: 0px;
+}
+
+.modal-content {
+  border-radius: 3px;
+}
+
+#homebanner h1, #homebanner h2 {
+  color: #FFF;
+  text-shadow: 0 1px 1px #000;
+}
+
+#homebanner .btn {
+  border: 3px solid white;
+}
+
+#homebanner h2 {
+  margin-bottom: 400px;
+}
+
+h1, h2, p {
+  font-family: "Open Sans";
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 20pt;
+}
+
+/*--------content------*/
+
+#supPopover {
+  background-color: #000; color: #FFF; border-radius: 0px;
+  .arrow:after {
+    border-top-color: #000;
+  }
+}
+
+.content .container {margin-bottom: 20px; margin-top: 20px;}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+.row img {
+  width: 100%;
+}
+
+.content.alter {
+  background-color: #F2F7FA;
+  border-top: 1px solid #D9DEE1;
+  border-bottom: 1px solid #D9DEE1;
+}
+
+/*--------footer------*/
+
+footer {
+  padding-top: 5px;
+  background-color: black;
+  color: white;
+  height: 100%;
+}
+
+footer .container a {
+  margin-left: 10px;
+  color: #999;
+}
