@@ -10,5 +10,9 @@
  *
  *= require_self
  *= require bootstrap
+ *= require bootflat
+ *= require bootflat-extensions
+ *= require bootflat-square
+ *= require green
  *= require_tree .
  */

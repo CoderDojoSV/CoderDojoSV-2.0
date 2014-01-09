@@ -26,14 +26,14 @@
               <li>
                 <%= link_to "GALLERY", root_url %>
               </li>
-              <li>
-                <%= link_to "HEROES", root_url %>
+              <li class="<%= 'active' if current_page?(past_projects_url) %>">
+                <%= link_to "PAST PROJECTS", past_projects_url %>
               </li>
               <li>
                 <%= link_to "DONATE", root_url %>
               </li>
-              <li class="active">
-                <%= link_to "LOGIN", root_url %>
+              <li>
+                <%= link_to "MY DOJO", root_url %>
               </li>
             </ul>
           </div>
@@ -41,7 +41,7 @@
       </nav>
     </div>
     <div id="body">
-      <div class="modal fade" id="signupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade modal-square" id="signupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -54,18 +54,13 @@
         <input/>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success">Sign Up</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-square btn-success">Sign Up</button>
+        <button type="button" class="btn btn-square btn-default" data-dismiss="modal">Close</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
       <%= yield %>
-      <div class="content alter" id="tfooter">
-        <div class="container">
-          <h2 class="center">Interested? &nbsp;<a class="btn btn-lg btn-success supbutton">Sign up now</a></h2>
-        </div>
-      </div>
     </div>
     <footer>
       <div class="container">

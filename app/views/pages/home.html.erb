@@ -1,17 +1,17 @@
 <div id="homebanner">
 	<div class="container">
   	<h1>Teaching the next generation to design and code</h1>
-  	<h2>Blurb Blurb</h2>
-    <p>
-      <a class="btn btn-lg btn-success supbutton" data-content="Sign up to our mailing list to recieve event announcements and ticket information.">Sign up now</a>
-      <div id="supPopover" class="popover fade top in" style="display: block;">
+    <h2>Mountain View and Campbell</h2>
+    <form id="emailgo" class="form-inline">
+      <a class="btn btn-square btn-lg btn-success supbutton">Join now</a>
+      <div id="supPopover" class="popover popover-square fade top in" style="display: block;">
         <div class="arrow"></div>
         <h3 class="popover-title" style="display: none;"></h3>
-        <div class="popover-content">
-          Sign up to our mailing list to recieve event announcements and ticket information.
+        <div class="popover-content center">
+          Sign up to get event announcements and/or volunteer to help
         </div>
       </div>
-    </p>
+    </form>
   </div>
 </div>
 
@@ -19,7 +19,7 @@
   <div class="container">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified">
-      <li class="active"><a href="#whatis" data-toggle="tab">What is CoderDojo?</a></li>
+      <li class="active"><a href="#whatis" data-toggle="tab">What are we?</a></li>
       <li><a href="#giv" data-toggle="tab">How can I help?</a></li>
       <li><a href="#sponsors" data-toggle="tab">Our sponsors</a></li>
       <li><a href="#news" data-toggle="tab">In the news</a></li>
@@ -47,8 +47,8 @@
 
 <div class="content alter">
   <div class="container">
-    <h1 class="center">Calendar</h1>
-    <h2 class="center text-muted">CoderDojo sessions in the Bay Area.</h2>
+    <h1 class="center">When are our sessions?</h1>
+    <h2 class="center text-muted">All of them and more.</h2>
 
     <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;height=480&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=coderdojo.com_i2hvg0bvac6p25fnot2t5mpkss%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="100%" height="480" frameborder="0" scrolling="no"></iframe>
   </div>
@@ -56,27 +56,44 @@
 
 <div class="content">
   <div class="container">
-    <h1 class="center">Resources</h1>
-    <h2 class="center text-muted">Reference material and technology websites.</h2>
-    <div class="container">
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs nav-justified">
-        <li class="active"><a href="#pastp" data-toggle="tab">Past session reference</a></li>
-        <li><a href="#vids" data-toggle="tab">Videos</a></li>
-        <li><a href="#books" data-toggle="tab">Books</a></li>
-        <li><a href="#sites" data-toggle="tab">Websites</a></li>
-      </ul>
-
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div class="tab-pane active" id="pastp">
-          <h2 class="text-primary">Headline</h2>
-          <p>Dummy text</p>
-        </div>
-        <div class="tab-pane" id="vids">...</div>
-        <div class="tab-pane" id="books">...</div>
-        <div class="tab-pane" id="sites">...</div>
-      </div>
-    </div>
+    <h1 class="center">Where can I find past projects?</h1>
+    <h2 class="center text-muted">Right here.</h2>
+    <div id="peep"></div>
+    <p><%= link_to "See more >>>", past_projects_url %></a></p>
   </div>
 </div>
+
+<div class="content alter" id="tfooter">
+  <div class="container">
+    <h2 class="center">Interested? &nbsp;<a class="btn btn-square btn-lg btn-success supbutton">Join now</a></h2>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $.get("https://api.github.com/search/repositories", {"q":"user:CoderDojoSV", "sort":"updated"}, function(d) {
+    for (var i = 0; i < 5; i++) {
+      var date = d.items[i].pushed_at.substring(5, 10) + "-" + d.items[i].pushed_at.substring(2, 4);
+      $("#peep").append("<h2><a href='" + d.items[i].html_url + "'>" + d.items[i].name + "</a></h2>");
+      $("#peep").append("<p class='text-muted'>" + d.items[i].description + " <span class='badge badge-square'>" + date + "</span></p>");
+    };
+  });
+});
+$(function() {
+  $("#homebanner h2").css("margin-bottom", $(window).height()-250-$("#homebanner h2").height());
+  $("#supPopover").animate({
+    left: $('#homebanner #emailgo .btn').offset().left-85,
+    top: $('#homebanner #emailgo .btn').offset().top-68
+  }, 0);
+  $( window ).resize(function() {
+    $("#homebanner h2").css("margin-bottom", $(window).height()-250-$("#homebanner h2").height());
+    $("#supPopover").animate({
+      left: $('#homebanner #emailgo .btn').offset().left-85,
+      top: $('#homebanner #emailgo .btn').offset().top-68
+    }, 0);
+  });
+  $('.btn.supbutton').click(function() {
+    $('#signupForm').modal()
+  });
+});
+</script>

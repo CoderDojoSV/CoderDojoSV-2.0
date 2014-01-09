@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.icheck
+//= require respond.min
 //= require main
 //= require turbolinks
 //= require_tree .
