@@ -16,5 +16,4 @@
 //= require jquery.icheck
 //= require respond.min
 //= require main
-//= require turbolinks
 //= require_tree .
