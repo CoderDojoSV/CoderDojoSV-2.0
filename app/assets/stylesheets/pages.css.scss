@@ -5,7 +5,7 @@
 /*-------layout-------*/
 
 .navbar-brand img {
-	height: auto;
+  height: auto;
   max-width:190px;
 }
 
@@ -14,14 +14,6 @@
 }
 
 .navbar-toggle {margin-top: 20px;}
-
-/*.navbar-nav > li > .dropdown-menu {
-  margin-top: 8px;
-}
-
-.navbar-inverse {
-	background-color: #080808;
-}*/
 
 #body {
   margin-top: 66px;
@@ -34,19 +26,18 @@
 #homebanner {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: url('http://www.placekitten.com/1402/1000') no-repeat center center;
-  /*background: url('http://blogs-images.forbes.com/jenniferhicks/files/2012/10/IMAG0239.jpg') no-repeat center center;*/
+}
+
+#bigbanner {background: url('http://www.placekitten.com/1402/1000') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.placekitten.com/1402/1000', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.placekitten.com/1402/1000', sizingMethod='scale')";
-}
+p,h4{margin-bottom:30px;margin-top: 20px;/*font-size:12pt;*/}}
 
 #homebanner {text-align: center; margin-bottom: 20px;}
 
-#homebanner h1, #homebanner h2 {
+#bigbanner h1, #bigbanner h2, #bigbanner p {
   color: #FFF;
   text-shadow: 0 1px 1px #000;
 }
@@ -103,4 +94,39 @@ footer {
 footer .container a {
   margin-left: 10px;
   color: #999;
+}
+
+/*---------sponsors----------*/
+
+.sponsorcontainer {width: 323px; height: 200px; text-align: center; vertical-align: middle; display: table-cell;}
+
+.sponsorcontainer img {
+   width: auto;
+   max-width: 100%;
+   max-height: 100px;
+}
+
+table#odonors td img {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+}
+
+table#odonors td {
+  width: 200px;
+  text-align: center;
+}
+
+div.center table {
+    margin: 0 auto; 
+    text-align: left;
+}
+
+@media all and (max-width: 768px) {
+  #sponsorRow {margin-top: 50px;}
+  #sponsorRow .col-sm-4 .sponsorcontainer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -1,62 +1,57 @@
-<div id="homebanner">
-	<div class="container">
-  	<h1>Teaching the next generation to design and code</h1>
-    <h2>Mountain View and Campbell</h2>
-    <form id="emailgo" class="form-inline">
-      <a class="btn btn-square btn-lg btn-success supbutton">Join now</a>
-      <div id="supPopover" class="popover popover-square fade top in" style="display: block;">
-        <div class="arrow"></div>
-        <h3 class="popover-title" style="display: none;"></h3>
-        <div class="popover-content center">
-          Sign up to get event announcements and/or volunteer to help
+<span id="topspan"/>
+<div id="bigbanner">
+  <div id="homebanner">
+  	<div class="container">
+    	<h1>Teaching the next generation to design and code</h1>
+      <h2>Mountain View and Campbell</h2>
+      <form id="emailgo" class="form-inline">
+        <a class="btn btn-square btn-lg btn-success supbutton">Join now</a>
+        <div id="supPopover" class="popover popover-square fade top in" style="display: block;">
+          <div class="arrow"></div>
+          <h3 class="popover-title" style="display: none;"></h3>
+          <div class="popover-content center">
+            Get event announcements or volunteer to help
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
-</div>
 
-<div class="content">
-  <div class="container">
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs nav-justified">
-      <li class="active"><a href="#whatis" data-toggle="tab">What are we?</a></li>
-      <li><a href="#giv" data-toggle="tab">How can I help?</a></li>
-      <li><a href="#sponsors" data-toggle="tab">Our sponsors</a></li>
-      <li><a href="#news" data-toggle="tab">In the news</a></li>
-    </ul>
-
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div class="tab-pane active" id="whatis">
-        <div class="row">
-          <div class="col-sm-6">
-            <h2><%= image_tag("toptab1.jpg", :alt => "Kids coding") %></h2>
-          </div>
-          <div class="col-sm-6">
-            <h2 class="text-primary">CoderDojo Silicon Valley teaches programming languages to youth, ages 7-17.</h2>
-            <p>Located at independently run dojos in Mountain View and Campbell, California, CoderDojo Silicon Valley is a Bay Area instance of <a href="http://www.coderdojo.com" target="_blank">CoderDojo</a>, a global collaboration of <em>free</em> and open programing clubs run by enthusiastic volunteers. At CoderDojos around the world, young people, along with parents and mentors, learn how to code, develop websites, make apps, program games and more!</p>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane" id="giv">...</div>
-      <div class="tab-pane" id="sponsors">...</div>
-      <div class="tab-pane" id="news">...</div>
+  <div class="content">
+    <div class="container">
+      <p>Located at independently run dojos in Mountain View and Campbell, California, CoderDojo Silicon Valley is a Bay Area instance of <a href="http://www.coderdojo.com" target="_blank">CoderDojo</a>, a global collaboration of <em>free</em> and open programing clubs run by enthusiastic volunteers.</p>
+      <p>At CoderDojos around the world, young people ages 7-17, along with parents and mentors, learn how to code, develop websites, make apps, program games and more!</p>
     </div>
   </div>
 </div>
+<span id="calspan"/>
 
 <div class="content alter">
   <div class="container">
-    <h1 class="center">When are our sessions?</h1>
-    <h2 class="center text-muted">All of them and more.</h2>
-    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;height=480&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=coderdojo.com_i2hvg0bvac6p25fnot2t5mpkss%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="100%" height="480" frameborder="0" scrolling="no"></iframe>
+    <h1 class="center">When are your sessions?</h1>
+    <h2 class="center text-muted">Here's ours<span class="hidden-xs"> and more</span>.</h2>
+    <div class="row">
+      <div class="col-sm-8 hidden-xs">
+        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;height=480&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=coderdojo.com_i2hvg0bvac6p25fnot2t5mpkss%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="100%" height="480" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default" id="stm">
+          <div class="panel-heading">Sessions this month</div>
+          <div class="panel-body">
+            <!--<h4>Unity 6-Week Mini Series</h4>
+            <p class="text-muted">Mountain View (MV) <span class='badge badge-square'>Jan 18-Mar 23</span></p>-->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<span id="spro"/>
 
 <div class="content">
   <div class="container">
-    <h1 class="center">Where can I find past projects?</h1>
-    <h2 class="center text-muted">Right here.</h2>
+    <h1 class="center">What have you been teaching?</h1>
+    <h2 class="center text-muted">Here's our most recent sessions.</h2>
     <table class="table">
       <tr>
         <td id="pro1"></td>
@@ -68,6 +63,48 @@
       </tr>
     </table>
     <p><%= link_to "See more >>>", past_projects_url %></a></p>
+  </div>
+</div>
+
+<span id="givspan"/>
+<div class="content alter">
+  <div class="container">
+    <h1 class="center">How Can I Help</h1>
+    <h2 class="center text-muted">How Can I Help</h2>
+    <p>Dummy Dummy Dummy Dummy Dummy</p>
+    <p>Dummy Dummy Dummy Dummy Dummy</p>
+    <p>Dummy Dummy Dummy Dummy Dummy</p>
+    <p>Dummy Dummy Dummy Dummy Dummy</p>
+    <p>Dummy Dummy Dummy Dummy Dummy</p>
+  </div>
+</div>
+
+<span id="ssspan"/>
+<div class="content">
+  <div class="container">
+    <h1 class="center">Who supports your wonderful venues?</h1>
+    <h2 class="center text-muted">Our venues are sponsored by:</h2>
+    <div class="row" id="sponsorRow">
+      <div class="col-sm-4">
+        <div class="sponsorcontainer"><a href="http://microsoft.com"><%= image_tag "sponsors/microsoft.png", :alt => "Microsoft" %></a></div>
+      </div>
+      <div class="col-sm-4">
+        <div class="sponsorcontainer"><a href="http://on-site.com"><%= image_tag "sponsors/onsite.gif", :alt => "On-Site.com" %></a></div>
+      </div>
+      <div class="col-sm-4">
+        <div class="sponsorcontainer"><a href="http://adobe.com"><%= image_tag "sponsors/adobes.png", :alt => "Adobe" %></a></div>
+      </div>
+    </div>
+    <h2 class="center">Other Donors</h2>
+    <div class="center">
+      <table id="odonors">
+        <tr>
+          <td><%= image_tag "sponsors/breakout.png", :alt => "Breakout Mentors" %></td>
+          <td><%= image_tag "sponsors/4D.gif", :alt => "4D" %></td>
+          <td><%= image_tag "sponsors/syman.png", :alt => "Symantec" %></td>
+        </tr>
+      </table> 
+    </div>
   </div>
 </div>
 
@@ -96,19 +133,31 @@ $(function() {
     //$("#pro5").append("<h2><a href='" + d.items[4].html_url + "'>" + d.items[4].name + "</a></h2>");
     //$("#pro5").append("<p class='text-muted'>" + d.items[4].description + " <span class='badge badge-square'>" + date + "</span></p>");
   });
+  $.get("/a.json", function(d) {
+    for (var i = 1; i < d.events.length; i++) {
+      $("#stm .panel-body").append("<p>" + d.events[i].event.title + "</p>");
+      var date = new Date(d.events[i].event.start_date);
+      var date2 = new Date(d.events[i].event.end_date);
+      $("#stm .panel-body").append("<p class='text-muted'>" + d.events[i].event.venue.city + " on the " + date.getDate() + "st</p> <span class='badge badge-square'>" + date.getHours() + ":" + date.getMinutes() + " to " + date2.getHours() + ":" + date2.getMinutes() + "</span></p>");
+    }
+  });
+  $('[data-spy="scroll"]').each(function () {
+      var $spy = $(this).scrollspy('refresh')
+  });
 });
 $(function() {
-  $("#homebanner h2").css("margin-bottom", $(window).height()-250-$("#homebanner h2").height());
   $("#supPopover").animate({
     left: $('#homebanner #emailgo .btn').offset().left-85,
     top: $('#homebanner #emailgo .btn').offset().top-68
   }, 0);
   $( window ).resize(function() {
-    $("#homebanner h2").css("margin-bottom", $(window).height()-250-$("#homebanner h2").height());
     $("#supPopover").animate({
       left: $('#homebanner #emailgo .btn').offset().left-85,
       top: $('#homebanner #emailgo .btn').offset().top-68
     }, 0);
+    $('[data-spy="scroll"]').each(function () {
+        var $spy = $(this).scrollspy('refresh')
+    });
   });
   $('.btn.supbutton').click(function() {
     $('#signupForm').modal()

@@ -15,5 +15,6 @@
 //= require bootstrap
 //= require jquery.icheck
 //= require respond.min
+//= require jquery.flip
 //= require main
 //= require_tree .
