@@ -69,9 +69,11 @@ body {max-width:1280px;margin:0 auto;overflow-x:hidden;}
 
 /*'http://www.placekitten.com/1402/1000'*/
 
-.bigo {background-color: rgba(165, 165, 165, 0.84); color: #FFF; a{color: #1A7A25;}}
+.container.bigo {background-color: rgba(227, 233, 255, 0.80); max-width: 940px; a{color: #1A7A25;} p{font-weight:400;}}
 
-.docute#bigbanner {background: url('/assets/cutedonate.jpg') no-repeat center -220px; background-size: auto 1700px;}
+.bigo img {height: 25px;margin-right:2px;}
+
+.docute#bigbanner {background: url('/assets/cutedonate.jpg') no-repeat center -220px; background-size: auto 1700px; .container.bigo{background-color: rgba(227, 233, 255, 0.67);}}
 
 #checkwin {background: url('/assets/cutedonate2.jpg') no-repeat center -220px; background-size: auto 1700px;}
 #owin {background: url('/assets/cutedonate2.jpg') no-repeat center -220px; background-size: auto 1700px;}
@@ -85,6 +87,8 @@ body {max-width:1280px;margin:0 auto;overflow-x:hidden;}
 
 #homebanner h1{margin-top: 50px; font-weight: 300;}
 #homebanner h2{margin-bottom: 450px; font-weight: 300;}
+
+#signupForm .icheckbox_square-green, #signupForm .iradio_square-green {margin-right: 10px;}
 
 #emailgo {
     padding: 15px;
@@ -111,6 +115,8 @@ h2 {
     font-size: 20pt;
 }
 
+#bigbanner .popover-content p {font-size:17px; font-weight:400; margin-bottom:0px;margin-top:0px;}
+
 /*--------content------*/
 
 .content .container {margin-bottom: 20px; margin-top: 20px;}
@@ -127,6 +133,8 @@ h2 {
     width: 100%;
 }
 
+.content .container.bigo {margin-bottom: 0px;}
+
 .box {
     background-color: hsla(143, 43%, 75%, 0.4);
     //background: url('/assets/cutedonate2.jpg') no-repeat center center;
@@ -137,6 +145,12 @@ h2 {
     h4 {font-family: "Quicksand", "Impact", sans-serif; font-size:3em; font-variant:small-caps;}
     text-align:center;
     margin-bottom: 15px;
+}
+
+.prettybox {
+    background-color: hsla(0, 0%, 100%, 0.64);
+    padding: 10px;
+    p {font-weight: 400;}
 }
 
 .bigreen{border-bottom: 1px solid green;}
@@ -209,6 +223,11 @@ table#odonors td {
     text-align: center;
 }
 
+.modal-body img {
+    width: 100px;
+    height: auto;
+}
+
 div.center table {
     margin: 0 auto; 
     text-align: left;
@@ -227,3 +246,4 @@ div.center table {
         margin-right: auto;
     }
 }
+#bigbanner #supPopover.popover {max-width: 290px; width: 100%;}

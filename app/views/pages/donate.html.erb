@@ -11,7 +11,7 @@
                     <div class="arrow"></div>
                     <h3 class="popover-title" style="display: none;"></h3>
                     <div class="popover-content center">
-                        Tax-deductible donations can be made to CoderDojo Silicon Valley (CDSV) through our fiscal sponsor.
+                        <p>Tax-deductible donations can be made to CoderDojo Silicon Valley through our fiscal sponsor.</p>
                     </div>
                 </div>
             </form>
@@ -19,7 +19,7 @@
     </div>
     <div class="content">
         <div class="container bigo">
-            <p>90% of all donations go directly to CDSV programs. SVEF retains 10% as compensation for donation processing and tax reporting services.</p>
+            <p>90% of all donations go directly to CoderDojo Silicon Valley programs. SVEF retains 10% as compensation for donation processing and tax reporting services.</p>
             <p>If you donate online, an additional 5% is applied towards PayPal/credit card fees.</p>
         </div>
     </div>
@@ -28,14 +28,14 @@
 <div class="content" id="checkwin" style="height:723px; display:none;">
     <br/>
     <div class="container">
-        <div style="max-width: 500px;">
-            <h1>By Check</h1>
+        <h1>By Check</h1>
+        <div style="max-width: 500px;" class="prettybox">
             <h4>Make check payable to:</h4>
             <pre>Silicon Valley Education Foundation</pre>
-            <h4>In the memo line of your check, be sure to include the following:</h4>
+            <h4>In the memo line of your check, please include the following:</h4>
             <pre>FBO/CoderDojo Silicon Valley</pre>
             <h4>Mail checks to:</h4>
-            <pre>Marcy Delgado
+            <pre>CoderDojo Silicon Valley
 PO BOX 20927
 San Jose CA 95160</pre>
             <hr/>
@@ -48,27 +48,48 @@ San Jose CA 95160</pre>
     <br/>
     <div class="container">
         <h1>Online</h1>
-        <div style="max-width: 500px;">
+        <div style="max-width: 500px;" class="prettybox">
             <p>Use the SVEF online donation form. Select:</p>
             <pre>I prefer to donate a different amount</pre>
-            <p>In the Comments/Cause section of the form, be sure to include the following: </p><pre>FBO/CoderDojo Silicon Valley</pre><p></p>
-            <p>If your employer matches contributions, enter their name in the section on the form: </p><pre>Employer's Name</pre><p></p>
+            <p>In the Comments/Cause section of the form, please include the following: </p>
+            <pre>FBO/CoderDojo Silicon Valley</pre>
+            <p>If your employer matches contributions, enter their name in the section on the form: </p>
+            <pre>Employer's Name</pre>
+            <hr/>
+            <span class="pull-right"><button class="btn btn-success btn-square gbtn">Donate</button></span> <button class="backbtn btn btn-default btn-square">Return</button>
         </div>
-        <hr/>
-        <button class="btn btn-success btn-square gbtn">Donate</button> <button class="backbtn btn btn-default btn-square">Return</button>
     </div>
 </div>
+
+<div class="modal fade modal-square" id="aForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Off-Site Link</h4>
+            </div>
+            <div class="modal-body">
+                <%= image_tag("woah.png", :alt => "Ninja") %>
+                <p>You are now being redirected to the SVEF online donation form.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-square btn-success" id="btno">Continue</button>
+                <button class="btn btn-square btn-default" data-dismiss="modal">No, thanks</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <script>
     $(function() {
         $("#supPopover").animate({
-            left: $('#homebanner #emailgo').offset().left+62,
-            top: $('#homebanner #emailgo .btn').offset().top-87
+            left: $('#homebanner #emailgo').offset().left+49,
+            top: $('#homebanner #emailgo .btn').offset().top-99
         }, 0);
         $( window ).resize(function() {
             $("#supPopover").animate({
-                left: $('#homebanner #emailgo').offset().left+62,
-                top: $('#homebanner #emailgo .btn').offset().top-87
+                left: $('#homebanner #emailgo').offset().left+49,
+                top: $('#homebanner #emailgo .btn').offset().top-99
             }, 0);
         });
     });
@@ -96,27 +117,7 @@ San Jose CA 95160</pre>
         $('#aForm').modal();
     });
     $("#btno").click(function(e) {
-        e.preventDefault();
-        $('#aForm').modal("dismiss");
-        $("#rb").trigger("click");
+        $('#aForm').modal("hide");
+        window.open("http://svefoundation.org/svefoundation/donate/");
     });
 </script>
-
-<div class="modal fade modal-square" id="aForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Off-Site Link</h4>
-            </div>
-            <div class="modal-body">
-                <p>You are now leaving CoderDojo Silicon Valley and going to SVEF.</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-square btn-success" id="btno">Accept</button>
-                <button type="button" class="btn btn-square btn-default" data-dismiss="modal">Deny</button>
-                <a style="display:none;" id="rb" target="_blank" href="http://svefoundation.org/svefoundation/donate/"></a>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
