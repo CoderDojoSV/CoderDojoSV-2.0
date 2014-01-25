@@ -1,105 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CoderDojo Silicon Valley</title>
-    <%= stylesheet_link_tag    "application", media: "all" %>
-    <%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.js" %>
-    <%= javascript_include_tag "application" %>
-    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,300" %>
-    <%= stylesheet_link_tag "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <div class="container">
-      <% if current_page?(root_url) %>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <%= link_to image_tag("logo.png", :alt => "CoderDojo Silicon Valley"), "#topspan", { :class=>"navbar-brand" } %>
+    <head>
+        <title>CoderDojo Silicon Valley</title>
+        <%= stylesheet_link_tag    "application", media: "all" %>
+        <%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.js" %>
+        <%= javascript_include_tag "application" %>
+        <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,300" %>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+        <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Quicksand:300,400" %>
+        <%= stylesheet_link_tag "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div id="everything">
+            <div class="container">
+                <% if current_page?(root_url) %>
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <%= link_to image_tag("logo.png", :alt => "CoderDojo Silicon Valley"), "#topspan", { :class=>"navbar-brand" } %>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li style="display:none;"><%= link_to "topspan", "#topspan" %></li>
+                                <li>
+                                    <%= link_to "EVENTS", "#calspan" %>
+                                </li>
+                                <li>
+                                    <%= link_to "GET INVOLVED", "#givspan" %>
+                                </li>
+                                <li>
+                                    <%= link_to "PROJECTS", "#spro" %>
+                                </li>
+                                <li>
+                                    <%= link_to "PHOTOS", "#phspan" %>
+                                </li>
+                                <li style="border-right: 1px solid gray;">
+                                    <%= link_to "SPONSORS", "#ssspan" %>
+                                </li>
+                                <li>
+                                    <%= link_to "DONATE", "/donate" %>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <% end %>
+                <% if !current_page?(root_url) %>
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <%= link_to image_tag("logo.png", :alt => "CoderDojo Silicon Valley"), root_url, { :class=>"navbar-brand" } %>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li style="border-right: 1px solid gray;">
+                                    <a href="/" style="font-size: 32px;">&larr;</a>
+                                </li>
+                                <li <% if current_page?(donate_url) %>class="active"<% end %>>
+                                    <%= link_to "DONATE", "/donate" %>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <% end %>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                <li style="display:none;"><%= link_to "topspan", "#topspan" %></li>
-                <li>
-                  <%= link_to "EVENTS", "#calspan" %>
-                </li>
-                <li>
-                  <%= link_to "PROJECTS", "#spro" %>
-                </li>
-                <li>
-                  <%= link_to "GET INVOLVED", "#givspan" %>
-                </li>
-                <li style="border-right: 1px solid gray;">
-                  <%= link_to "SPONSORS", "#ssspan" %>
-                </li>
-                <li>
-                  <%= link_to "DONATE", "#dspan" %>
-                </li>
-              </ul>
+            <div id="body">
+                <%= yield %>
             </div>
-          </div>
-        </nav>
-      <% end %>
-      <% if !current_page?(root_url) %>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <%= link_to image_tag("logo.png", :alt => "CoderDojo Silicon Valley"), root_url, { :class=>"navbar-brand" } %>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                <li style="border-right: 1px solid gray;">
-                  <%= link_to "⟸", root_url %>
-                </li>
-                <li>
-                  <%= link_to "DONATE", "#dspan" %>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      <% end %>
-    </div>
-    <div id="body">
-      <div class="modal fade modal-square" id="signupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Sign up to our mailing list</h4>
-      </div>
-      <div class="modal-body">
-        <input/>
-        <input/>
-        <input/>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-square btn-success">Sign Up</button>
-        <button type="button" class="btn btn-square btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-      <%= yield %>
-    </div>
-    <footer>
-      <div class="container">
-        <p class="pull-right"><a href="http://twitter.com/SVCoderDojo">twitter</a> <a href="mailto:siliconvalley@coderdojo.com">contact</a></p>
-        <p>2014 CoderDojo Silicon Valley</p>
-      </div>
-    </footer>
-  </body>
+            <footer>
+                <div class="container">
+                    <p class="pull-right">
+                        <%= link_to image_tag("twitter.png", :alt => "twitter"), "http://www.twitter.com/SVCoderDojo" %> 
+                        <%= link_to image_tag("mail-icon.png", :alt => "contact"), "mailto:siliconvalley@coderdojo.com" %>
+                    </p>
+                    <p id="ftext">2014 CoderDojo Silicon Valley <span class="spanhxs"><span style="margin-left:7px;margin-right:7px;">&#8226;<!--&#9679;--></span> We are a nonprofit <span style="margin-left:7px;margin-right:7px;">&#8226;</span> Made with &#x2764; by a CoderNinja</span></p>
+                    <p class="visible-xs">We are a nonprofit</p>
+                    <p class="visible-xs">Made with &#x2764; by a CoderNinja</p>
+                </div>
+            </footer>
+        </div>
+    </body>
 </html>

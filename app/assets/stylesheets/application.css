@@ -14,5 +14,6 @@
  *= require bootflat-extensions
  *= require bootflat-square
  *= require green
+ *= require btc
  *= require_tree .
  */

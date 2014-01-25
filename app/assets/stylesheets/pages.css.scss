@@ -1,65 +1,114 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+@media (max-width:767px) {
+    .spanhxs {display:none;}
+    ul{padding-start:20px!important;-webkit-padding-start:20px!important;-moz-padding-start:20px!important;-o-padding-start:20px!important;-ms-padding-start:20px!important;}
+}
 
 /*-------layout-------*/
 
 .navbar-brand img {
-  height: auto;
-  max-width:190px;
+    height: auto;
+    max-width:190px;
 }
 
+#everything {background-color:white;z-index:1;}
+body {background-color:white; box-shadow: 0 0 5px 2px #000;}
+
 .navbar-right {
-  margin-top: 17px;
+    margin-top: 17px;
 }
+
+.carousel-inner img {width: 100%;}
 
 .navbar-toggle {margin-top: 20px;}
 
 #body {
-  margin-top: 66px;
+    margin-top: 66px;
+}
+
+body {max-width:1280px;margin:0 auto;overflow-x:hidden;}
+
+//.table > tbody > tr > td {border-top: 0px solid #fff;}
+
+.navbar {
+    max-width:1280px;margin:0 auto;overflow-x:hidden;
 }
 
 .center {text-align: center;}
 
+#cal {
+    max-width: 100%;
+    max-height: 100%;
+    height: 500px;
+    width: 100%;
+}
+
+#emailgo img {
+    height: 45px;
+    margin-right: 5px;
+}
+
 /*-------banner-------*/
 
 #homebanner {
-  padding-top: 20px;
-  padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-#bigbanner {background: url('http://www.placekitten.com/1402/1000') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-p,h4{margin-bottom:30px;margin-top: 20px;/*font-size:12pt;*/}}
-
-#homebanner {text-align: center; margin-bottom: 20px;}
-
-#bigbanner h1, #bigbanner h2, #bigbanner p {
-  color: #FFF;
-  text-shadow: 0 1px 1px #000;
+#bigbanner {
+    background: url('/assets/toptab1.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    p,h4{margin-bottom:30px;margin-top: 20px;}
 }
 
-#homebanner h2{margin-bottom: 450px;}
+/*'http://www.placekitten.com/1402/1000'*/
+
+.bigo {background-color: rgba(165, 165, 165, 0.84); color: #FFF; a{color: #1A7A25;}}
+
+.docute#bigbanner {background: url('/assets/cutedonate.jpg') no-repeat center -220px; background-size: auto 1700px;}
+
+#checkwin {background: url('/assets/cutedonate2.jpg') no-repeat center -220px; background-size: auto 1700px;}
+#owin {background: url('/assets/cutedonate2.jpg') no-repeat center -220px; background-size: auto 1700px;}
+
+#homebanner {text-align: center;}
+
+#bigbanner h1, #bigbanner h2 {
+    color: #FFF;
+    text-shadow: 0 1px 1px #000;
+}
+
+#homebanner h1{margin-top: 50px; font-weight: 300;}
+#homebanner h2{margin-bottom: 450px; font-weight: 300;}
 
 #emailgo {
-  padding: 15px;
-  background: #FFF;
-  border-radius: 1px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  width: 136px;
-  margin: 0 auto;
+    padding: 15px;
+    background: #FFF;
+    border-radius: 1px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 136px;
+    margin: 0 auto;
 }
 
-h1, h2, p {
-  font-family: "Open Sans";
+h1, h2 {font-family:"Roboto";}
+h1 {font-size: 3em;}
+
+p {
+    font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
 }
+
+ul{padding-start:0px;-webkit-padding-start:0px;-moz-padding-start:0px;-o-padding-start:0px;-ms-padding-start:0px;}
 
 h2 {
-  font-weight: 300;
-  font-size: 20pt;
+    font-weight: 300;
+    font-size: 20pt;
 }
 
 /*--------content------*/
@@ -72,49 +121,92 @@ h2 {
     }
 }
 
+.content .container h1 {margin-bottom: 40px;}
+
 .row img {
-  width: 100%;
+    width: 100%;
 }
 
-.content.alter {
-  background-color: #F2F7FA;
-  border-top: 1px solid #D9DEE1;
-  border-bottom: 1px solid #D9DEE1;
+.box {
+    background-color: hsla(143, 43%, 75%, 0.4);
+    //background: url('/assets/cutedonate2.jpg') no-repeat center center;
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 10px;
+    height: 250px;
+    h4 {font-family: "Quicksand", "Impact", sans-serif; font-size:3em; font-variant:small-caps;}
+    text-align:center;
+    margin-bottom: 15px;
 }
+
+.bigreen{border-bottom: 1px solid green;}
+
+.bigreen .container {
+    margin-top: 20px;
+    //box-shadow: 0px -5px 26px -10px rgba(0, 0, 0, 0.4);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    //background-color: #edf2f5;
+    position: relative;
+    .arrow {
+        top: -21px;
+        left: 50%;
+        margin-left: -11px;
+        border-color: transparent;
+        //border-bottom-color: #edf2f5;
+        border-bottom-width: 0;
+        border-width: 11px;
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+    h4 {
+        font-family: "Quicksand", "Impact", sans-serif; font-size:3em; font-variant:small-caps;
+        font-weight:300;
+    }
+}
+
+.carousel-indicators li{width:16px;height:16px;margin:1px 5px}
+.carousel-indicators li.active{margin:0 5px;width:18px;height:18px}
 
 /*--------footer------*/
-
 footer {
-  padding-top: 5px;
-  background-color: black;
-  color: white;
-  height: 100%;
+    padding-top: 5px;
+    background-color: #292929;
+    color: #999999;
+    height: 100%;
 }
 
 footer .container a {
-  margin-left: 10px;
-  color: #999;
+    margin-left: 10px;
+    color: #999;
 }
+
+footer img {height: 32px;}
+
+footer #ftext {margin-top: 5px;}
 
 /*---------sponsors----------*/
 
-.sponsorcontainer {width: 323px; height: 200px; text-align: center; vertical-align: middle; display: table-cell;}
+.sponsorcontainer {width: 100%; height: 200px; text-align: center; /*vertical-align: middle; display: table-cell;*/}
 
 .sponsorcontainer img {
-   width: auto;
-   max-width: 100%;
-   max-height: 100px;
+    width: auto;
+    max-width: 100%;
+    max-height: 100px;
 }
 
 table#odonors td img {
-  height: 50px;
-  width: auto;
-  max-width: 200px;
+    height: 50px;
+    width: auto;
+    max-width: 200px;
 }
 
 table#odonors td {
-  width: 200px;
-  text-align: center;
+    width: 200px;
+    text-align: center;
 }
 
 div.center table {
@@ -122,11 +214,16 @@ div.center table {
     text-align: left;
 }
 
+.fullwid {
+    width: 100%;
+    max-width: 360px;
+}
+
 @media all and (max-width: 768px) {
-  #sponsorRow {margin-top: 50px;}
-  #sponsorRow .col-sm-4 .sponsorcontainer {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    #sponsorRow {margin-top: 50px;}
+    #sponsorRow .col-sm-4 .sponsorcontainer {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

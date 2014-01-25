@@ -1,0 +1,122 @@
+<div id="bigbanner" class="docute goway">
+    <div id="homebanner">
+        <div class="container">
+            <h1>Donations come in all sizes.</h1>
+            <h2>And so do our participants.</h2>
+            <form id="emailgo" class="form-inline" style="width:388px;">
+                <%= link_to image_tag("sponsors/SVEF.jpg", :alt => "SVEF"), "http://svefoundation.org" %>
+                <a class="btn btn-square btn-lg btn-success supbutton" id="bycheck">By Check</a>
+                <a class="btn btn-square btn-lg btn-default supbutton" id="online">Online</a>
+                <div id="supPopover" class="popover popover-square fade top in" style="display: block;">
+                    <div class="arrow"></div>
+                    <h3 class="popover-title" style="display: none;"></h3>
+                    <div class="popover-content center">
+                        Tax-deductible donations can be made to CoderDojo Silicon Valley (CDSV) through our fiscal sponsor.
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container bigo">
+            <p>90% of all donations go directly to CDSV programs. SVEF retains 10% as compensation for donation processing and tax reporting services.</p>
+            <p>If you donate online, an additional 5% is applied towards PayPal/credit card fees.</p>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="checkwin" style="height:723px; display:none;">
+    <br/>
+    <div class="container">
+        <div style="max-width: 500px;">
+            <h1>By Check</h1>
+            <h4>Make check payable to:</h4>
+            <pre>Silicon Valley Education Foundation</pre>
+            <h4>In the memo line of your check, be sure to include the following:</h4>
+            <pre>FBO/CoderDojo Silicon Valley</pre>
+            <h4>Mail checks to:</h4>
+            <pre>Marcy Delgado
+PO BOX 20927
+San Jose CA 95160</pre>
+            <hr/>
+            <button class="backbtn btn btn-default btn-square">Return</button>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="owin" style="display:none; height:723px;">
+    <br/>
+    <div class="container">
+        <h1>Online</h1>
+        <div style="max-width: 500px;">
+            <p>Use the SVEF online donation form. Select:</p>
+            <pre>I prefer to donate a different amount</pre>
+            <p>In the Comments/Cause section of the form, be sure to include the following: </p><pre>FBO/CoderDojo Silicon Valley</pre><p></p>
+            <p>If your employer matches contributions, enter their name in the section on the form: </p><pre>Employer's Name</pre><p></p>
+        </div>
+        <hr/>
+        <button class="btn btn-success btn-square gbtn">Donate</button> <button class="backbtn btn btn-default btn-square">Return</button>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        $("#supPopover").animate({
+            left: $('#homebanner #emailgo').offset().left+62,
+            top: $('#homebanner #emailgo .btn').offset().top-87
+        }, 0);
+        $( window ).resize(function() {
+            $("#supPopover").animate({
+                left: $('#homebanner #emailgo').offset().left+62,
+                top: $('#homebanner #emailgo .btn').offset().top-87
+            }, 0);
+        });
+    });
+    $("#bycheck").click(function() {
+        $(".goway").fadeOut(1000);
+        setTimeout(function() {
+            $("#checkwin").fadeIn(1000);
+        }, 1000);
+    });
+    $("#online").click(function() {
+        $(".goway").fadeOut(1000);
+        setTimeout(function() {
+            $("#owin").fadeIn(1000);
+        }, 1000);
+    });
+    $(".backbtn").click(function() {
+        $("#checkwin").fadeOut(1000);
+        $("#owin").fadeOut(1000);
+        setTimeout(function() {
+            $(".goway").fadeIn(1000);
+        }, 1000);
+    });
+    $(".gbtn").click(function(e) {
+        e.preventDefault();
+        $('#aForm').modal();
+    });
+    $("#btno").click(function(e) {
+        e.preventDefault();
+        $('#aForm').modal("dismiss");
+        $("#rb").trigger("click");
+    });
+</script>
+
+<div class="modal fade modal-square" id="aForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Off-Site Link</h4>
+            </div>
+            <div class="modal-body">
+                <p>You are now leaving CoderDojo Silicon Valley and going to SVEF.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-square btn-success" id="btno">Accept</button>
+                <button type="button" class="btn btn-square btn-default" data-dismiss="modal">Deny</button>
+                <a style="display:none;" id="rb" target="_blank" href="http://svefoundation.org/svefoundation/donate/"></a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
