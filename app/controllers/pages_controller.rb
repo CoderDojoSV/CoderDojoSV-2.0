@@ -5,4 +5,6 @@ class PagesController < ApplicationController
     end
     def donate
     end
+    def join
+    end
 end

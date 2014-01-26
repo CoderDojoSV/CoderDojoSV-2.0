@@ -607,7 +607,11 @@
         }, 200);
         $('.supbutton').click(function(e) {
             e.preventDefault();
-            $('#signupForm').modal()
+            if ($(window).width() < 980) {
+                location = "/join";
+            } else {
+                $('#signupForm').modal();
+            }
         });
     });
 </script>
