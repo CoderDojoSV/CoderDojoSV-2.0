@@ -6,6 +6,8 @@ fix bugs you will need to install Ruby version 2.0 or greater. Right now the
 happy development path requires a Mac OS X, Linux, or BSD system but in the
 future we hope to welcome our friends running Microsoft Windows as well.
 
+The primary maintainer of CoderDojoSV.com is @iTweak0r.
+
 ## Prerequisite Dependencies
 
 There are two pieces of software you need to install in advance. On Linux or
