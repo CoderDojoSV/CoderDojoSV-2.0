@@ -4,15 +4,12 @@
         <div class="container">
             <h1>Teaching the next generation to design and code</h1>
             <h2>Mountain View and Campbell, CA</h2>
+            <div class="popbox">
+                <p class="center">Get event announcements and ticket information, or volunteer to help</p>
+                <div class="arrow"></div>
+            </div>
             <form id="emailgo" class="form-inline">
                 <a class="btn btn-square btn-lg btn-success supbutton">Join now</a>
-                <div id="supPopover" class="popover popover-square fade top in" style="display: block;">
-                    <div class="arrow"></div>
-                    <h3 class="popover-title" style="display: none;"></h3>
-                    <div class="popover-content center">
-                        <p>Get event announcements and ticket information, or volunteer to help</p>
-                    </div>
-                </div>
             </form>
         </div>
     </div>
@@ -45,7 +42,7 @@
                     <li><p>A laptop</p></li>
                     <li><p>A parent! (Very important). If you are 13 or under, your parent must stay with you during the session</p></li>
                 </ul>
-                <p><a href="#" class="supbutton">Join now</a> to get tickets!</p>
+                <p><a href="#" class="supbutton">Join now</a> to get event announcements and ticket information.</p>
             </div>
         </div>
     </div>
@@ -590,21 +587,6 @@
                 $("#stm .panel-body").append("<p class='text-muted'>" + d.events[i].event.venue.city + " on the " + date.getDate() + "st</p> <span class='badge badge-square'>" + date.getHours() + ":" + date.getMinutes() + " to " + date2.getHours() + ":" + date2.getMinutes() + "</span></p>");
             }
         });
-    });
-    $(function() {
-        $("#supPopover").hide();
-        setTimeout(function() {
-            $("#supPopover").animate({
-                left: $('#homebanner #emailgo .btn').offset().left-90,
-                top: $('#homebanner #emailgo .btn').offset().top-75
-            }, 0);
-            $("#supPopover").show();
-            $( window ).resize(function() {
-                $("#supPopover").animate({
-                    left: $('#homebanner #emailgo .btn').offset().left-90
-                }, 0);
-            });
-        }, 200);
         $('.supbutton').click(function(e) {
             e.preventDefault();
             if ($(window).width() < 980) {
@@ -612,6 +594,18 @@
             } else {
                 $('#signupForm').modal();
             }
+        });
+        $(function(){
+            $('input[type=radio]').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+                increaseArea: '20%' // optional
+            }); 
+            $('input[type=checkbox]').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+                increaseArea: '20%' // optional
+            }); 
         });
     });
 </script>

@@ -3,17 +3,14 @@
         <div class="container">
             <h1>Donations come in all sizes.</h1>
             <h2>And so do our participants.</h2>
+            <div class="popbox">
+                <p class="center">Tax-deductible donations can be made to CoderDojo Silicon Valley through our fiscal sponsor.</p>
+                <div class="arrow"></div>
+            </div>
             <form id="emailgo" class="form-inline" style="width:388px;">
                 <%= link_to image_tag("sponsors/SVEF.jpg", :alt => "SVEF"), "http://svefoundation.org" %>
                 <a class="btn btn-square btn-lg btn-success supbutton" id="bycheck">By Check</a>
                 <a class="btn btn-square btn-lg btn-default supbutton" id="online">Online</a>
-                <div id="supPopover" class="popover popover-square fade top in" style="display: block;">
-                    <div class="arrow"></div>
-                    <h3 class="popover-title" style="display: none;"></h3>
-                    <div class="popover-content center">
-                        <p>Tax-deductible donations can be made to CoderDojo Silicon Valley through our fiscal sponsor.</p>
-                    </div>
-                </div>
             </form>
         </div>
     </div>
@@ -84,12 +81,12 @@ San Jose CA 95160</pre>
     $(function() {
         $("#supPopover").animate({
             left: $('#homebanner #emailgo').offset().left+49,
-            top: $('#homebanner #emailgo .btn').offset().top-99
+            top: $('#homebanner #emailgo #bycheck').offset().top-99
         }, 0);
         $( window ).resize(function() {
             $("#supPopover").animate({
                 left: $('#homebanner #emailgo').offset().left+49,
-                top: $('#homebanner #emailgo .btn').offset().top-99
+                top: $('#homebanner #emailgo #bycheck').offset().top-99
             }, 0);
         });
     });

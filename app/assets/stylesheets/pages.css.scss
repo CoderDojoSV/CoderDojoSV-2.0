@@ -14,6 +14,36 @@
     max-width:190px;
 }
 
+.popbox {
+    .arrow {
+        left: 50%;
+        bottom: -13px;
+        margin-left: -11px;
+        border-color: transparent;
+        border-top-color: rgb(41, 41, 41);
+        border-bottom-width: 0;
+        border-width: 11px;
+        position: relative;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+    background-color: rgb(41, 41, 41);
+    color: #fff;
+    padding: 10px;
+    max-width: 277px;
+    margin: 0 auto;
+    position: relative;
+    height: 67px;
+}
+
+#bigbanner .popbox p {font-size:16px; font-weight:400; margin-bottom:0px;margin-top:0px;}
+
+@media (max-width:1000px) {
+    .navbar .nav li {font-size: 10px;}
+}
+
 #everything {background-color:white;z-index:1;}
 body {background-color:white; box-shadow: 0 0 5px 2px #000;}
 
@@ -73,7 +103,7 @@ body {max-width:1280px;margin:0 auto;overflow-x:hidden;}
 
 .bigo img {height: 25px;margin-right:2px;}
 
-.docute#bigbanner {background: url('/assets/cutedonate.jpg') no-repeat center -220px; background-size: auto 1700px; .container.bigo{background-color: rgba(227, 233, 255, 0.67);}}
+.docute#bigbanner {background: url('/assets/cutedonate.jpg') no-repeat center -220px; background-size: auto 1700px; .container.bigo{background-color: rgba(227, 233, 255, 0.67);} .popbox{height:89px;}}
 
 #checkwin {background: url('/assets/cutedonate2.jpg') no-repeat center -220px; background-size: auto 1700px;}
 #owin {background: url('/assets/cutedonate2.jpg') no-repeat center -220px; background-size: auto 1700px;}
@@ -86,7 +116,7 @@ body {max-width:1280px;margin:0 auto;overflow-x:hidden;}
 }
 
 #homebanner h1{margin-top: 50px; font-weight: 300;}
-#homebanner h2{margin-bottom: 450px; font-weight: 300;}
+#homebanner h2{margin-bottom: 380px; font-weight: 300;}
 
 #signupForm .icheckbox_square-green, #signupForm .iradio_square-green {margin-right: 10px;}
 
@@ -96,6 +126,7 @@ body {max-width:1280px;margin:0 auto;overflow-x:hidden;}
     border-radius: 1px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     width: 136px;
+    display: inline-block;
     margin: 0 auto;
 }
 
@@ -114,8 +145,6 @@ h2 {
     font-weight: 300;
     font-size: 20pt;
 }
-
-#bigbanner .popover-content p {font-size:17px; font-weight:400; margin-bottom:0px;margin-top:0px;}
 
 /*--------content------*/
 
@@ -167,7 +196,7 @@ h2 {
         left: 50%;
         margin-left: -11px;
         border-color: transparent;
-        //border-bottom-color: #edf2f5;
+        //border-top-color: #edf2f5;
         border-bottom-width: 0;
         border-width: 11px;
         position: absolute;

@@ -22,16 +22,3 @@ $(function() {
         }, 2000);
     });*/
 });
-
-$(function(){
-    $('input[type=radio]').iCheck({
-        checkboxClass: 'icheckbox_square-green',
-        radioClass: 'iradio_square-green',
-        increaseArea: '20%' // optional
-    }); 
-    $('input[type=checkbox]').iCheck({
-        checkboxClass: 'icheckbox_square-green',
-        radioClass: 'iradio_square-green',
-        increaseArea: '20%' // optional
-    }); 
-});
