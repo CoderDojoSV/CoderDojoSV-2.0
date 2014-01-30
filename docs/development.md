@@ -6,7 +6,7 @@ fix bugs you will need to install Ruby version 2.0 or greater. Right now the
 happy development path requires a Mac OS X, Linux, or BSD system but in the
 future we hope to welcome our friends running Microsoft Windows as well.
 
-The primary maintainer of CoderDojoSV.com is @iTweak0r.
+The primary maintainer of CoderDojoSV.com is [@iTweak0r][].
 
 ## Prerequisite Dependencies
 
@@ -41,7 +41,7 @@ following variables in the format
 
 ### `DATABASE_URL`: The url-formatted location of your database.
 
-Format: postgres://*user name*:*passphrase*@*host name*/*database name*:*port*
+Format: postgres://*[user name]*:*[passphrase]*@*[host name]*/*[database name]*:*[port]*
 
 - *user name*: the username of the database user Rails should connect as.
 	Can be blank and usually is.
@@ -65,6 +65,7 @@ If you have any issues setting up, [open an issue][issue]! We'll help you out.
 [Ruby]: http://ruby-lang.org
 [Rails]: http://rubyonrails.org
 [Homebrew]: http://brew.sh/
+[@iTweak0r]: https://github.com/iTweak0r
 [issue]: https://github.com/CoderDojoSV/CoderDojoSV-2.0/issues/new
 [Brackets]: http://brackets.io
 [Sublime Text]: http://www.sublimetext.com/
