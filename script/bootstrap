@@ -1,0 +1,60 @@
+#!/bin/sh
+APP_ROOT="`dirname $0`/.."
+
+echo "Checking out your Ruby.."
+which ruby > /dev/null
+if [[ $? -ne 0 ]]; then
+	echo "Hey without Ruby we can't help you much. Install Ruby!"
+	exit 1
+fi
+
+echo "Checking out Bundler.."
+which bundle > /dev/null
+if [[ $? -ne 0 ]]; then
+	echo "You don't have bundler. It's cool though, I'm installing it for you."
+	gem install bundler || exit 1
+fi
+
+echo "Bundlin'.."
+bundle install --local --path vendor/gems --without production || exit 1
+
+if [[ -f "$APP_ROOT/.env" ]; then
+	cat <<-MESSAGE
+You already have  a .env file.
+
+Make sure it contains all environment variables documented
+in docs/development.md 
+See https://github.com/coderdojosv/CoderDojoSV-2.0/tree/master/docs/development.md
+	MESSAGE
+else
+	cat <<-MESSAGE
+You don't have a .env file yet. This script has just created
+one for you. Make sure you check it and fill in all required
+fields as documented in docs/development.md 
+
+See https://github.com/coderdojosv/CoderDojoSV-2.0/tree/master/docs/development.md
+	MESSAGE
+
+	cat <<-DOTENV > "$APP_ROOT/.env"
+export DATABASE_URL=
+	DOTENV
+fi
+
+echo "Running unrun migrations"
+
+rake db:migrate
+
+if [[ $? -ne 0 ]]; then
+	echo "Looks like there's some trouble with the database"
+	echo "I'm trying to create a new one."
+	rake db:create || exit 2
+	rake db:migrate || exit 2
+	rake db:seed || exit 2
+fi
+
+echo "You're ready to start! Happy hacking!"
+
+
+
+
+
