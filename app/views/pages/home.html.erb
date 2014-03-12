@@ -563,19 +563,19 @@
                 }
             }
             d = newD;
-            var date = d.items[0].pushed_at.substring(5, 10) + "-" + d.items[0].pushed_at.substring(2, 4);
+            var date = d.items[0].created_at.substring(5, 10) + "-" + d.items[0].created_at.substring(2, 4);
             $("#pro1").append("<h2><a href='" + d.items[0].html_url + "'>" + d.items[0].name + "</a></h2>");
             $("#pro1").append("<p class='text-muted'>" + d.items[0].description + " <span class='badge badge-square'>" + date + "</span></p>");
-            date = d.items[1].pushed_at.substring(5, 10) + "-" + d.items[1].pushed_at.substring(2, 4);
+            date = d.items[1].created_at.substring(5, 10) + "-" + d.items[1].created_at.substring(2, 4);
             $("#pro2").append("<h2><a href='" + d.items[1].html_url + "'>" + d.items[1].name + "</a></h2>");
             $("#pro2").append("<p class='text-muted'>" + d.items[1].description + " <span class='badge badge-square'>" + date + "</span></p>");
-            date = d.items[2].pushed_at.substring(5, 10) + "-" + d.items[2].pushed_at.substring(2, 4);
+            date = d.items[2].created_at.substring(5, 10) + "-" + d.items[2].created_at.substring(2, 4);
             $("#pro3").append("<h2><a href='" + d.items[2].html_url + "'>" + d.items[2].name + "</a></h2>");
             $("#pro3").append("<p class='text-muted'>" + d.items[2].description + " <span class='badge badge-square'>" + date + "</span></p>");
-            date = d.items[3].pushed_at.substring(5, 10) + "-" + d.items[3].pushed_at.substring(2, 4);
+            date = d.items[3].created_at.substring(5, 10) + "-" + d.items[3].created_at.substring(2, 4);
             $("#pro4").append("<h2><a href='" + d.items[3].html_url + "'>" + d.items[3].name + "</a></h2>");
             $("#pro4").append("<p class='text-muted'>" + d.items[3].description + " <span class='badge badge-square'>" + date + "</span></p>");
-            //date = d.items[4].pushed_at.substring(5, 10) + "-" + d.items[4].pushed_at.substring(2, 4);
+            //date = d.items[4].created_at.substring(5, 10) + "-" + d.items[4].created_at.substring(2, 4);
             //$("#pro5").append("<h2><a href='" + d.items[4].html_url + "'>" + d.items[4].name + "</a></h2>");
             //$("#pro5").append("<p class='text-muted'>" + d.items[4].description + " <span class='badge badge-square'>" + date + "</span></p>");
         });
