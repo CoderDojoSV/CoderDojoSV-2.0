@@ -589,11 +589,7 @@
         });
         $('.supbutton').click(function(e) {
             e.preventDefault();
-            if ($(window).width() < 980) {
-                location = "/join";
-            } else {
-                $('#signupForm').modal();
-            }
+            location = "/join";
         });
         $(function(){
             $('input[type=radio]').iCheck({
