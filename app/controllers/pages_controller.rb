@@ -7,4 +7,8 @@ class PagesController < ApplicationController
     end
     def join
     end
+    def mobilevideo
+    end
+    def root
+    end
 end

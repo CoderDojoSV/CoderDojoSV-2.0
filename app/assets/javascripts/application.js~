@@ -15,7 +15,6 @@
 //= require bootstrap
 //= require jquery.icheck
 //= require respond.min
-//= require popup
 //= require btc
 //= require main
 //= require_tree .

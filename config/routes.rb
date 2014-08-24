@@ -1,9 +1,11 @@
 Coderdojosv::Application.routes.draw do
-    root "pages#home"
+    root "pages#root"
+    get "/home" => "pages#home"
     get "/past_projects" => "pages#pastp"
     get "/sponsors" => "pages#sponsors"
     get "/donate" => "pages#donate"
     get "/join" => "pages#join"
+    get "/video" => "pages#mobilevideo"
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
     

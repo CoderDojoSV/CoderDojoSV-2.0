@@ -2,6 +2,7 @@
 <div id="bigbanner">
     <div id="homebanner">
         <div class="container">
+            <%= link_to image_tag("play43.svg", :alt => "Play Video"), "#video", "class" => "playvideo" %>
             <h1>Teaching the next generation to design and code</h1>
             <h2>Mountain View and Campbell, CA</h2>
             <div class="popbox">
@@ -16,7 +17,7 @@
     
     <div class="content">
         <div class="container bigo">
-            <p>CoderDojo Silicon Valley is a Bay Area instance of <a href="http://www.coderdojo.com" target="_blank"><%= image_tag("DodoLogo.png", :alt => "CoderDojo") %></a>, a global collaboration of <em>free</em> and open programming workshops run by enthusiastic volunteers.</p>
+            <p>CoderDojo Silicon Valley is a Bay Area instance of <a href="http://www.coderdojo.com" target="_blank"><%= image_tag("DodoLogo.png", :alt => "CoderDojo", :title => "CoderDojo") %></a>, a global collaboration of <em>free</em> and open programming workshops run by enthusiastic volunteers.</p>
             <p>At CoderDojos around the world, young people ages 7-17, along with parents and mentors, learn how to code, develop websites, make apps, program games and more!</p>
         </div>
     </div>
@@ -127,7 +128,6 @@
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="3"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="6"></li>
             </ol>
             
@@ -147,9 +147,6 @@
                 </div>
                 <div class="item">
                     <%= image_tag("topgallery/c5.jpg", :alt => "Error loading") %>
-                </div>
-                <div class="item">
-                    <%= image_tag("topgallery/c6.png", :alt => "Error loading") %>
                 </div>
                 <div class="item">
                     <%= image_tag("topgallery/c7.jpg", :alt => "Error loading") %>
@@ -215,7 +212,7 @@
 <div class="bigreen">
     <div class="arrow"></div>
     <div class="container">
-        <p class="center">If you are intrested in supporting what we do by providing space or food donations, <a href="mailto:siliconvalley@coderdojo.com">please get in touch.</a></p>
+        <p class="center">If you are interested in supporting what we do by providing space or food donations, <a href="mailto:siliconvalley@coderdojo.com">please get in touch.</a></p>
     </div>
 </div>
 
@@ -224,332 +221,6 @@
         <h2 class="center">Interested? &nbsp;<a class="btn btn-square btn-lg btn-success supbutton">Join now</a></h2>
     </div>
 </div>
-
-
-<div class="modal fade modal-square" id="signupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        
-        <div class="modal-content">
-            <form action="http://coderdojosv.us6.list-manage.com/subscribe/post?u=3563ea3f0a8ae78b09f1fea36&amp;id=27c567c77e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Sign up to our mailing list</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Thank you for your interest in CoderDojo Silicon Valley.</p>
-                    <p>By joining our mailing list, you will receive event announcements and ticket information.</p>
-                    <p>You can also let us know if you are interested in becoming a technical mentor, event volunteer, or team leader.</p>
-                    <p>Welcome to our club!</p>
-                    <!-- Begin MailChimp Signup Form -->
-                    <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-                    <style type="text/css">
-                        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-                        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-                        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                    </style>
-                    <div id="mc_embed_signup">
-                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                        <div class="mc-field-group">
-                            <label for="mce-EMAIL">Email Address (Parent's email if you are under 14)  <span class="asterisk">*</span>
-                            </label>
-                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                        </div>
-                        <div class="mc-field-group">
-                            <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
-                            </label>
-                            <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
-                        </div>
-                        <div class="mc-field-group">
-                            <label for="mce-LNAME">Last Name  <span class="asterisk">*</span>
-                            </label>
-                            <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
-                        </div>
-                        <div class="mc-field-group">
-                            <label for="mce-MMERGE3">Add anything you'd like us to know about you </label>
-                            <input type="text" value="" name="MMERGE3" class="" id="mce-MMERGE3">
-                        </div>
-                        <div class="mc-field-group">
-                            <label for="mce-MMERGE4">Company or School </label>
-                            <input type="text" value="" name="MMERGE4" class="" id="mce-MMERGE4">
-                        </div>
-                        <div class="mc-field-group input-group">
-                            <strong>I am interested in attending or helping at: </strong>
-                            <ul><li><input type="checkbox" value="1" name="group[12481][1]" id="mce-group[12481]-12481-0"><label for="mce-group[12481]-12481-0">Mountain View</label></li>
-                                <li><input type="checkbox" value="2" name="group[12481][2]" id="mce-group[12481]-12481-1"><label for="mce-group[12481]-12481-1">South Bay/Campbell</label></li>
-                            </ul>
-                        </div>
-                        <div class="mc-field-group input-group">
-                            <strong>I am interested in becoming a/an: </strong>
-                            <ul><li><input type="checkbox" value="4" name="group[12485][4]" id="mce-group[12485]-12485-0"><label for="mce-group[12485]-12485-0">Mentor - Roam the room and answer technical questions at sessions</label></li>
-                                <li><input type="checkbox" value="8" name="group[12485][8]" id="mce-group[12485]-12485-1"><label for="mce-group[12485]-12485-1">Instructor - Lead a project-based instruction</label></li>
-                                <li><input type="checkbox" value="4096" name="group[12485][4096]" id="mce-group[12485]-12485-2"><label for="mce-group[12485]-12485-2">Event Volunteer - Assist with planning, logistics, registration, photos</label></li>
-                                <li><input type="checkbox" value="65536" name="group[12485][65536]" id="mce-group[12485]-12485-3"><label for="mce-group[12485]-12485-3">Team Leader - Contribute to the vision and goals for the organization</label></li>
-                                <li><input type="checkbox" value="2147483648" name="group[12485][2147483648]" id="mce-group[12485]-12485-4"><label for="mce-group[12485]-12485-4">Participant - Bringing my children to events</label></li>
-                            </ul>
-                        </div>
-                        <div class="mc-field-group input-group">
-                            <strong>I am comfortable mentoring in the following areas: </strong>
-                            <ul><li><input type="checkbox" value="16" name="group[12489][16]" id="mce-group[12489]-12489-0"><label for="mce-group[12489]-12489-0">Scratch/Tynker</label></li>
-                                <li><input type="checkbox" value="32" name="group[12489][32]" id="mce-group[12489]-12489-1"><label for="mce-group[12489]-12489-1">Python</label></li>
-                                <li><input type="checkbox" value="64" name="group[12489][64]" id="mce-group[12489]-12489-2"><label for="mce-group[12489]-12489-2">Ruby</label></li>
-                                <li><input type="checkbox" value="128" name="group[12489][128]" id="mce-group[12489]-12489-3"><label for="mce-group[12489]-12489-3">Web Development</label></li>
-                                <li><input type="checkbox" value="256" name="group[12489][256]" id="mce-group[12489]-12489-4"><label for="mce-group[12489]-12489-4">C++</label></li>
-                                <li><input type="checkbox" value="512" name="group[12489][512]" id="mce-group[12489]-12489-5"><label for="mce-group[12489]-12489-5">Mobile Apps</label></li>
-                                <li><input type="checkbox" value="1024" name="group[12489][1024]" id="mce-group[12489]-12489-6"><label for="mce-group[12489]-12489-6">Unity</label></li>
-                                <li><input type="checkbox" value="2048" name="group[12489][2048]" id="mce-group[12489]-12489-7"><label for="mce-group[12489]-12489-7">Java</label></li>
-                                <li><input type="checkbox" value="8192" name="group[12489][8192]" id="mce-group[12489]-12489-8"><label for="mce-group[12489]-12489-8">Minecraft Modding</label></li>
-                                <li><input type="checkbox" value="16384" name="group[12489][16384]" id="mce-group[12489]-12489-9"><label for="mce-group[12489]-12489-9">Robotics</label></li>
-                                <li><input type="checkbox" value="32768" name="group[12489][32768]" id="mce-group[12489]-12489-10"><label for="mce-group[12489]-12489-10">Microcontrollers - Arduino/RasPi</label></li>
-                                <li><input type="checkbox" value="131072" name="group[12489][131072]" id="mce-group[12489]-12489-11"><label for="mce-group[12489]-12489-11">Other</label></li>
-                            </ul>
-                        </div>
-                        <div class="mc-field-group input-group">
-                            <strong>I am a/an: </strong>
-                            <ul><li><input type="checkbox" value="262144" name="group[12517][262144]" id="mce-group[12517]-12517-0"><label for="mce-group[12517]-12517-0">Professional Programmer or Computer Scientist</label></li>
-                                <li><input type="checkbox" value="524288" name="group[12517][524288]" id="mce-group[12517]-12517-1"><label for="mce-group[12517]-12517-1">Other Business Professional</label></li>
-                                <li><input type="checkbox" value="1048576" name="group[12517][1048576]" id="mce-group[12517]-12517-2"><label for="mce-group[12517]-12517-2">University Student</label></li>
-                                <li><input type="checkbox" value="2097152" name="group[12517][2097152]" id="mce-group[12517]-12517-3"><label for="mce-group[12517]-12517-3">High School Student</label></li>
-                                <li><input type="checkbox" value="4194304" name="group[12517][4194304]" id="mce-group[12517]-12517-4"><label for="mce-group[12517]-12517-4">Youth, under 14 years old</label></li>
-                                <li><input type="checkbox" value="8388608" name="group[12517][8388608]" id="mce-group[12517]-12517-5"><label for="mce-group[12517]-12517-5">Parent</label></li>
-                                <li><input type="checkbox" value="16777216" name="group[12517][16777216]" id="mce-group[12517]-12517-6"><label for="mce-group[12517]-12517-6">Computer Science Teacher</label></li>
-                                <li><input type="checkbox" value="4294967296" name="group[12517][4294967296]" id="mce-group[12517]-12517-7"><label for="mce-group[12517]-12517-7">General Ed Teacher</label></li>
-                                <li><input type="checkbox" value="8589934592" name="group[12517][8589934592]" id="mce-group[12517]-12517-8"><label for="mce-group[12517]-12517-8">Other</label></li>
-                            </ul>
-                        </div>
-                        <div class="mc-field-group input-group">
-                            <strong>Do you have membership at: </strong>
-                            <ul><li><input type="checkbox" value="33554432" name="group[12525][33554432]" id="mce-group[12525]-12525-0"><label for="mce-group[12525]-12525-0">Hacker Dojo Mountain View</label></li>
-                                <li><input type="checkbox" value="67108864" name="group[12525][67108864]" id="mce-group[12525]-12525-1"><label for="mce-group[12525]-12525-1">Tech Shop San Jose</label></li>
-                                <li><input type="checkbox" value="134217728" name="group[12525][134217728]" id="mce-group[12525]-12525-2"><label for="mce-group[12525]-12525-2">Other Hacker Space</label></li>
-                            </ul>
-                        </div>
-                        <div class="mc-field-group input-group">
-                            <strong>Would your company have space for dojo meetings? </strong>
-                            <ul><li><input type="radio" value="268435456" name="group[12529]" id="mce-group[12529]-12529-0"><label for="mce-group[12529]-12529-0">Yes</label></li>
-                                <li><input type="radio" value="536870912" name="group[12529]" id="mce-group[12529]-12529-1"><label for="mce-group[12529]-12529-1">No</label></li>
-                                <li><input type="radio" value="1073741824" name="group[12529]" id="mce-group[12529]-12529-2"><label for="mce-group[12529]-12529-2">Maybe, I'm willing to check</label></li>
-                            </ul>
-                        </div>
-                        <div class="mc-field-group input-group">
-                            <strong>How did you first hear about us? </strong>
-                            <ul><li><input type="checkbox" value="17179869184" name="group[13937][17179869184]" id="mce-group[13937]-13937-0"><label for="mce-group[13937]-13937-0">Code.org website</label></li>
-                                <li><input type="checkbox" value="34359738368" name="group[13937][34359738368]" id="mce-group[13937]-13937-1"><label for="mce-group[13937]-13937-1">CoderDojo website</label></li>
-                                <li><input type="checkbox" value="68719476736" name="group[13937][68719476736]" id="mce-group[13937]-13937-2"><label for="mce-group[13937]-13937-2">Internal company email</label></li>
-                                <li><input type="checkbox" value="137438953472" name="group[13937][137438953472]" id="mce-group[13937]-13937-3"><label for="mce-group[13937]-13937-3">A friend told me</label></li>
-                                <li><input type="checkbox" value="274877906944" name="group[13937][274877906944]" id="mce-group[13937]-13937-4"><label for="mce-group[13937]-13937-4">Contacted by a CoderDojo organizer</label></li>
-                                <li><input type="checkbox" value="549755813888" name="group[13937][549755813888]" id="mce-group[13937]-13937-5"><label for="mce-group[13937]-13937-5">At an event</label></li>
-                                <li><input type="checkbox" value="1099511627776" name="group[13937][1099511627776]" id="mce-group[13937]-13937-6"><label for="mce-group[13937]-13937-6">Newspaper</label></li>
-                                <li><input type="checkbox" value="2199023255552" name="group[13937][2199023255552]" id="mce-group[13937]-13937-7"><label for="mce-group[13937]-13937-7">Flyer</label></li>
-                                <li><input type="checkbox" value="4398046511104" name="group[13937][4398046511104]" id="mce-group[13937]-13937-8"><label for="mce-group[13937]-13937-8">Other</label></li>
-                            </ul>
-                        </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_3563ea3f0a8ae78b09f1fea36_27c567c77e" value=""></div>
-                    </div>
-                    <script type="text/javascript">
-                        var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';
-                        try {
-                            var jqueryLoaded=jQuery;
-                            jqueryLoaded=true;
-                        } catch(err) {
-                            var jqueryLoaded=false;
-                        }
-                        var head= document.getElementsByTagName('head')[0];
-                        if (!jqueryLoaded) {
-                            var script = document.createElement('script');
-                            script.type = 'text/javascript';
-                            script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
-                            head.appendChild(script);
-                            if (script.readyState && script.onload!==null){
-                                script.onreadystatechange= function () {
-                                    if (this.readyState == 'complete') mce_preload_check();
-                                }    
-                            }
-                        }
-                        
-                        var err_style = '';
-                        try{
-                            err_style = mc_custom_error_style;
-                        } catch(e){
-                            err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
-                        }
-                        var head= document.getElementsByTagName('head')[0];
-                        var style= document.createElement('style');
-                        style.type= 'text/css';
-                        if (style.styleSheet) {
-                            style.styleSheet.cssText = err_style;
-                        } else {
-                            style.appendChild(document.createTextNode(err_style));
-                        }
-                        head.appendChild(style);
-                        setTimeout('mce_preload_check();', 250);
-                        
-                        var mce_preload_checks = 0;
-                        function mce_preload_check(){
-                            if (mce_preload_checks>40) return;
-                            mce_preload_checks++;
-                            try {
-                                var jqueryLoaded=jQuery;
-                            } catch(err) {
-                                setTimeout('mce_preload_check();', 250);
-                                return;
-                            }
-                            var script = document.createElement('script');
-                            script.type = 'text/javascript';
-                            script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
-                            head.appendChild(script);
-                            try {
-                                var validatorLoaded=jQuery("#fake-form").validate({});
-                            } catch(err) {
-                                setTimeout('mce_preload_check();', 250);
-                                return;
-                            }
-                            mce_init_form();
-                        }
-                        function mce_init_form(){
-                            jQuery(document).ready( function($) {
-                                var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
-                                var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
-                                $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
-                                options = { url: 'http://coderdojosv.us6.list-manage.com/subscribe/post-json?u=3563ea3f0a8ae78b09f1fea36&id=27c567c77e&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
-                                           beforeSubmit: function(){
-                                               $('#mce_tmp_error_msg').remove();
-                                               $('.datefield','#mc_embed_signup').each(
-                                                   function(){
-                                                       var txt = 'filled';
-                                                       var fields = new Array();
-                                                       var i = 0;
-                                                       $(':text', this).each(
-                                                           function(){
-                                                               fields[i] = this;
-                                                               i++;
-                                                           });
-                                                       $(':hidden', this).each(
-                                                           function(){
-                                                               var bday = false;
-                                                               if (fields.length == 2){
-                                                                   bday = true;
-                                                                   fields[2] = {'value':1970};//trick birthdays into having years
-                                                               }
-                                                               if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
-                                                                   this.value = '';
-                                                               } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
-                                                                   this.value = '';
-                                                               } else {
-                                                                   if (/\[day\]/.test(fields[0].name)){
-                                                                       this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;									        
-                                                                   } else {
-                                                                       this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
-                                                                   }
-                                                               }
-                                                           });
-                                                   });
-                                               $('.phonefield-us','#mc_embed_signup').each(
-                                                   function(){
-                                                       var fields = new Array();
-                                                       var i = 0;
-                                                       $(':text', this).each(
-                                                           function(){
-                                                               fields[i] = this;
-                                                               i++;
-                                                           });
-                                                       $(':hidden', this).each(
-                                                           function(){
-                                                               if ( fields[0].value.length != 3 || fields[1].value.length!=3 || fields[2].value.length!=4 ){
-                                                                   this.value = '';
-                                                               } else {
-                                                                   this.value = 'filled';
-                                                               }
-                                                           });
-                                                   });
-                                               return mce_validator.form();
-                                           }, 
-                                           success: mce_success_cb
-                                          };
-                                $('#mc-embedded-subscribe-form').ajaxForm(options);
-                                
-                                
-                            });
-                        }
-                        function mce_success_cb(resp){
-                            $('#mce-success-response').hide();
-                            $('#mce-error-response').hide();
-                            if (resp.result=="success"){
-                                $('#mce-'+resp.result+'-response').show();
-                                $('#mce-'+resp.result+'-response').html(resp.msg);
-                                $('#mc-embedded-subscribe-form').each(function(){
-                                    this.reset();
-                                });
-                            } else {
-                                var index = -1;
-                                var msg;
-                                try {
-                                    var parts = resp.msg.split(' - ',2);
-                                    if (parts[1]==undefined){
-                                        msg = resp.msg;
-                                    } else {
-                                        i = parseInt(parts[0]);
-                                        if (i.toString() == parts[0]){
-                                            index = parts[0];
-                                            msg = parts[1];
-                                        } else {
-                                            index = -1;
-                                            msg = resp.msg;
-                                        }
-                                    }
-                                } catch(e){
-                                    index = -1;
-                                    msg = resp.msg;
-                                }
-                                try{
-                                    if (index== -1){
-                                        $('#mce-'+resp.result+'-response').show();
-                                        $('#mce-'+resp.result+'-response').html(msg);            
-                                    } else {
-                                        err_id = 'mce_tmp_error_msg';
-                                        html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
-                                        
-                                        var input_id = '#mc_embed_signup';
-                                        var f = $(input_id);
-                                        if (ftypes[index]=='address'){
-                                            input_id = '#mce-'+fnames[index]+'-addr1';
-                                            f = $(input_id).parent().parent().get(0);
-                                        } else if (ftypes[index]=='date'){
-                                            input_id = '#mce-'+fnames[index]+'-month';
-                                            f = $(input_id).parent().parent().get(0);
-                                        } else {
-                                            input_id = '#mce-'+fnames[index];
-                                            f = $().parent(input_id).get(0);
-                                        }
-                                        if (f){
-                                            $(f).append(html);
-                                            $(input_id).focus();
-                                        } else {
-                                            $('#mce-'+resp.result+'-response').show();
-                                            $('#mce-'+resp.result+'-response').html(msg);
-                                        }
-                                    }
-                                } catch(e){
-                                    $('#mce-'+resp.result+'-response').show();
-                                    $('#mce-'+resp.result+'-response').html(msg);
-                                }
-                            }
-                        }
-                        
-                    </script>
-                    <!--End mc_embed_signup-->
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" value="Sign Up" name="subscribe" class="btn btn-success btn-square">
-                    <button type="button" class="btn btn-square btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 <script>
     $(function() {
@@ -587,6 +258,10 @@
                 $("#stm .panel-body").append("<p class='text-muted'>" + d.events[i].event.venue.city + " on the " + date.getDate() + "st</p> <span class='badge badge-square'>" + date.getHours() + ":" + date.getMinutes() + " to " + date2.getHours() + ":" + date2.getMinutes() + "</span></p>");
             }
         });
+        $('.playvideo').magnificPopup({
+            type:'inline',
+            midClick: true
+        });
         $('.supbutton').click(function(e) {
             e.preventDefault();
             location = "/join";
@@ -601,7 +276,25 @@
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
                 increaseArea: '20%' // optional
-            }); 
+            });
+            $('.playvideo').click(function() {
+                if( /Android|webOS|iPhone|iPad|iPod|Windows Phone|BlackBerry/i.test(navigator.userAgent) ) {
+                    $("body").html("<video controls style='width: 100%; height: 100%;' src='https://dl.dropbox.com/s/cnwu2jsp7mkcd6y/CDSVMovie.mp4'><p>Sorry, your device can't play this video.</p><small>H.264-compatible browser needed</video></video><script>setInterval(function(){var winHeight = $(window).height();$('video').css({'height': winHeight, 'width': '100%'});}, 400);$('video').get(0).play();window.onpageshow = function(evt) {if (evt.persisted) {document.body.style.display = 'none';location.reload();}};<\/script>");
+                } else {
+                    history.replaceState({}, "CoderDojo Silicon Valley", "/");
+                    $('#video video').get(0).play();
+                }
+            });
         });
     });
+    window.onpageshow = function(evt) {
+        // If persisted then it is in the page cache, force a reload of the page.
+        if (evt.persisted) {
+            document.body.style.display = "none";
+            location.reload();
+        }
+    };
 </script>
+<div id="video" class="white-popup mfp-hide">
+    <video src="https://dl.dropbox.com/s/cnwu2jsp7mkcd6y/CDSVMovie.mp4" controls></video>
+</div>

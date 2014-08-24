@@ -1,0 +1,7 @@
+<script>
+    if( /Android|webOS|iPhone|iPad|iPod|Windows Phone|BlackBerry/i.test(navigator.userAgent) ) {
+        var stateObj = { whatisit: "back prevention" };
+        history.pushState(stateObj, "", "/");
+    }
+    document.location.href = "/home"
+</script>
